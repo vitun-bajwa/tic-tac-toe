@@ -1,0 +1,20 @@
+.board{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 10px;
+    width: 300px;
+    margin-bottom: 20px;
+}
+.board div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    background-color: lightslategrey;
+    font-size: 48px;
+    cursor: pointer;
+}
+.button{
+    font-size: 18px;
+    padding: 10px 20px;
+}

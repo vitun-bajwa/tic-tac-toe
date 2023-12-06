@@ -1,0 +1,7 @@
+<h1>Tic Tac Toe</h1>
+<div class="board">
+    <div *ngFor="let cell of cells; let i=index" (click)="makeMove(i)">
+    {{cell}}
+    </div>
+</div>
+<button (click)="reset()">Reset</button>
