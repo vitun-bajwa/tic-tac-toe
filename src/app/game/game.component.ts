@@ -26,9 +26,12 @@ export class GameComponent implements OnInit {
       this.currentPlayer = this.currentPlayer === Player.X ? Player.O : Player.X
     }
 
-    if(this.winner) {
+    if (this.winner) {
       alert(`Player ${this.winner} wins!`);
-    } else if(this.gameOver) {
+      setTimeout(() => {
+        this.reset();
+      }, 3000)
+    } else if (this.gameOver) {
       alert(`It\'s a draw!`);
     }
   }
@@ -44,8 +47,8 @@ export class GameComponent implements OnInit {
         this.cells[a] === this.cells[b] &&
         this.cells[a] === this.cells[c]
       ) {
-          this.winner = this.cells[a];
-          this.gameOver = true;
+        this.winner = this.cells[a];
+        this.gameOver = true;
       }
     }
   }
